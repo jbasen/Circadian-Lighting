@@ -3,8 +3,8 @@ their own system or dealers to use in their showrooms.  If the code is used in a
 customer's system, where the dealer will profit from it, then I ask for simple payment
 of $100 ($105 if paid through Paypal).  This payment licenses the dealer to use it on 
 as many customer systems as they want. Anyone who pays for the module will also be 
-provided with the full S# source code for the module.  To arrange for payment please
-contact jay.m.basen@gmail.com 
+provided with the full S# source code for the module.  Additional information on
+paying the license fee is available in the module help file
 
 This module is designed to simulate circadian lighting in a home.  It tracks the sun
 and outputs the color temperature and brightness for smart bulbs to mimic the changes 
@@ -33,46 +33,3 @@ module with Philips Hue bulbs, the latest version of these modules should
 be downloaded from the Ultamation web site and a license key must also be separately 
 purchased from them.
 
-INPUTS
-Initialize                    -   Pulse this input to intialize the module 
-Circadian_Lighting_Enable     -   Enables calculation of solar azimuth/elevation and
-                                  outputting of brightness and color temperature
-                                  to lights
-Circadian_Lighting_Disable    -   Disables calculations and outputting brightness and
-                                  color temperature to lights
-Circadian_Lighting_Toggle     -   Toggles Circadian Lighting on/off
-Light_*_On_FB                 -   Feedback from lighting driver module as to whether
-                                  a light is on.  
-
-OUTPUTS
-Circadian_Lighting_Enable_FB  -   High if circadian lighting enabled.  Otherwise Low
-Circadian_Lighting_Disabled_FB-   High if circadian lighting disabled.  Otherwise Low
-Color_Temperature_*           -   The color temperature that smart lighting should be set to
-                                  for proper circadian lighting
-Brightness_*                  -   The brightness that smart lighting should be set to for proper
-                                  circadian lighting
-Hue_*                         -   The hue set for color bulbs when circadian lighting is
-                                  enabled
-Saturation_*                  -   The saturation set for color bulbs when circadian lighting 
-                                  is enabled
-
-PARAMETERS
-Latitude                      -   Latitude of the home
-Longitude                     -   Longitude of the home
-Logger_Level                  -   Defines which types of messages will be logged during 
-                                  operation for debugging purposes 0 = None, 3 = Errors, 
-                                  7 = Errors + Status, 9 = Errors + Status + Math
-Minutes_Between_Calcs         -   The number of minutes the module will wait between 
-                                  calculation operations
-Max_Color_Temperature         -   Defaults to 5500K.  Shouldn't be changed unless there is a 
-                                  specific need
-Min_Color_Temperature         -   Defaults to 2000K.  Shouldn't be changed unless there is a 
-                                  specific need
-Max_Brightness_*              -   The maximum dimming level a light will be set to. Lighting
-                                  level in the room should be set with a light meter to match 
-                                  daytime shade lighting of 20,000 lux, or more, at the places
-                                  in the room that people will occupy.
-Min_Brightness_*              -   The minimum dimming level a light will be set to.  Lighting
-                                  level in the room should be set with a light meter to match 
-                                  sunrise/sunset lighting of 400 lux at the places in the room 
-                                  that people will occupy.
